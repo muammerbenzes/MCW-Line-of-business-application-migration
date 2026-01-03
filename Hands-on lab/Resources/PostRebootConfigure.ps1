@@ -131,15 +131,15 @@ Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
     -Value "C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -File $opsDir\OnLoginConfigure.ps1"
 
 # Download AzCopy. We won't use the aks.ms/downloadazcopy link in case of breaking changes in later versions
-$azcopyUrl = "https://azcopy.azureedge.net/azcopy-8-1-0/MicrosoftAzureStorageAzCopy_netcore_x64.msi"
-$azcopyMsi = "$tempDir\azcopy.msi"
+#$azcopyUrl = "https://azcopy.azureedge.net/azcopy-8-1-0/MicrosoftAzureStorageAzCopy_netcore_x64.msi"
+#$azcopyMsi = "$tempDir\azcopy.msi"
 Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyMsi
 
 # Install AzCopy
 $arguments = "/i",$azcopyMsi,"/q"
 Start-Process -FilePath msiexec.exe -ArgumentList $arguments -Wait
-$azcopy = '"C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy\AzCopy.exe"'
-
+#$azcopy = '"C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy\AzCopy.exe"'
+$azcopy = "Start=BitsTransfer"
 # Download SmartHotel VMs from blob storage
 $container = 'https://opsgilitylabs.blob.core.windows.net/public/'
 
