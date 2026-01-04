@@ -139,7 +139,7 @@ Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyMsi
 $arguments = "/i",$azcopyMsi,"/q"
 Start-Process -FilePath msiexec.exe -ArgumentList $arguments -Wait
 #$azcopy = '"C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy\AzCopy.exe"'
-$azcopy = "Start=BitsTransfer"
+$azcopy = "Start-BitsTransfer"
 # Download SmartHotel VMs from blob storage
 $container = 'https://opsgilitylabs.blob.core.windows.net/public/'
 
