@@ -136,12 +136,13 @@ Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 #Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyMsi
 
 # Install AzCopy
-$arguments = "/i",$azcopyMsi,"/q"
-Start-Process -FilePath msiexec.exe -ArgumentList $arguments -Wait
+#$arguments = "/i",$azcopyMsi,"/q"
+#Start-Process -FilePath msiexec.exe -ArgumentList $arguments -Wait
 #$azcopy = '"C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy\AzCopy.exe"'
-$azcopy = "Start-BitsTransfer"
+#$azcopy = "Start-BitsTransfer"
+
 # Download SmartHotel VMs from blob storage
-$container = 'https://opsgilitylabs.blob.core.windows.net/public/'
+$container = 'https://opsgilitylabs.blob.core.windows.net/public'
 
 Start-BitsTransfer -Source "$container/SmartHotelWeb1.zip" -Destination "$tempDir\SmartHotelWeb1.zip"
 Start-BitsTransfer -Source "$container/SmartHotelWeb2.zip" -Destination "$tempDir\SmartHotelWeb2.zip"
