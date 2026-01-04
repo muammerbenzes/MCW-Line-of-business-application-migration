@@ -149,13 +149,9 @@ $container = 'https://opsgilitylabs.blob.core.windows.net/public'
 #Start-BitsTransfer -Source "$container/SmartHotelSQL1.zip" -Destination "$tempDir\SmartHotelSQL1.zip"
 #Start-BitsTransfer -Source "$container/UbuntuWAF.zip" -Destination "$tempDir\UbuntuWAF.zip"
 
-Invoke-WebRequest $container/SmartHotelWeb1.zip -OutFile $tempDir\SmartHotelWeb1.zip
-Invoke-WebRequest $container/SmartHotelWeb2.zip -OutFile $tempDir\SmartHotelWeb2.zip
-Invoke-WebRequest $container/SmartHotelSQL1.zip -OutFile $tempDir\SmartHotelSQL1.zip
-Invoke-WebRequest $container/UbuntuWAF.zip -OutFile $tempDir\UbuntuWAF.zip
-
 # Download the Azure Migrate appliance to save time during the lab
-$migrateApplianceUrl = Follow-Redirect("https://aka.ms/migrate/appliance/hyperv")
+#$migrateApplianceUrl = Follow-Redirect("https://aka.ms/migrate/appliance/hyperv")
+$migrateApplianceUrl = "https://download.microsoft.com/download/1/d/a/1da26fee-88e3-4c24-bc02-263bc63282d4/AzureMigrateAppliance_v3.20.09.25.zip"
 Start-BitsTransfer -Source $migrateApplianceUrl -Destination "$tempDir\AzureMigrateAppliance.zip"
 
 # Unzip the VMs
