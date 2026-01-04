@@ -35,7 +35,7 @@
         "dmsSubnetName": "DMS",
         "customScriptFolder": "./",
         "customScriptUriScriptFileName": "BootstrapSmartHotelHost.ps1",
-        "customScriptUri": "https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/BootstrapSmartHotelHost.ps1"
+        "customScriptUri": "https://raw.githubusercontent.com/muammerbenzes/MCW-Line-of-business-application-migration/refs/heads/master/Hands-on%20lab/Resources/BootstrapSmartHotelHost.ps1"
     },
     "resources": [
         {
