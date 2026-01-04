@@ -151,7 +151,7 @@ Start-BitsTransfer -Source "$container/UbuntuWAF.zip" -Destination "$tempDir\Ubu
 
 # Download the Azure Migrate appliance to save time during the lab
 $migrateApplianceUrl = Follow-Redirect("https://aka.ms/migrate/appliance/hyperv")
-#Start-BitsTransfer -Source $migrateApplianceUrl -Destination "$tempDir\AzureMigrateAppliance.zip"
+Start-BitsTransfer -Source $migrateApplianceUrl -Destination "$tempDir\AzureMigrateAppliance.zip"
 
 # Unzip the VMs
 $zipfiles = Get-ChildItem -Path "$tempDir\*.zip"
