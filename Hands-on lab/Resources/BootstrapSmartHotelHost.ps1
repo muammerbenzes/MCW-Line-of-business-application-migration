@@ -24,9 +24,8 @@ Format-Volume -DriveLetter F -FileSystem NTFS -NewFileSystemLabel DATA
 
 # Download disks for nested Hyper-V VMs, and various other files we'll need during the lab
 $downloads = @( `
-     #"https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/PostRebootConfigure.ps1" `
-    #,
-    "https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/OnLoginConfigure.ps1" `
+    "https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/PostRebootConfigure.ps1" `
+    ,"https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/OnLoginConfigure.ps1" `
     ,"https://github.com/muammerbenzes/MCW-Line-of-business-application-migration/blob/master/Hands-on%20lab/Resources/ConfigureAzureMigrateApplianceNetwork.ps1" `
     ,"https://download.microsoft.com/download/C/6/3/C63D8695-CEF2-43C3-AF0A-4989507E429B/DataMigrationAssistant.msi" `
     )
