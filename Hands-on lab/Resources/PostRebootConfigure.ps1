@@ -133,7 +133,7 @@ Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 # Download AzCopy. We won't use the aks.ms/downloadazcopy link in case of breaking changes in later versions
 #$azcopyUrl = "https://azcopy.azureedge.net/azcopy-8-1-0/MicrosoftAzureStorageAzCopy_netcore_x64.msi"
 #$azcopyMsi = "$tempDir\azcopy.msi"
-Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyMsi
+#Start-BitsTransfer -Source $azcopyUrl -Destination $azcopyMsi
 
 # Install AzCopy
 $arguments = "/i",$azcopyMsi,"/q"
