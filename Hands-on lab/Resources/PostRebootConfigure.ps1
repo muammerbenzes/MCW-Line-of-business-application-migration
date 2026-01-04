@@ -143,10 +143,10 @@ $azcopy = "Start-BitsTransfer"
 # Download SmartHotel VMs from blob storage
 $container = 'https://opsgilitylabs.blob.core.windows.net/public/'
 
- cmd /c "$azcopy /Source:$container/SmartHotelWeb1.zip /Dest:$tempDir\SmartHotelWeb1.zip"
- cmd /c "$azcopy /Source:$container/SmartHotelWeb2.zip /Dest:$tempDir\SmartHotelWeb2.zip"
- cmd /c "$azcopy /Source:$container/SmartHotelSQL1.zip /Dest:$tempDir\SmartHotelSQL1.zip"
- cmd /c "$azcopy /Source:$container/UbuntuWAF.zip /Dest:$tempDir\UbuntuWAF.zip"
+ cmd /c "$azcopy -Source $container/SmartHotelWeb1.zip -Destination $tempDir\SmartHotelWeb1.zip"
+ cmd /c "$azcopy -Source $container/SmartHotelWeb2.zip -Destination $tempDir\SmartHotelWeb2.zip"
+ cmd /c "$azcopy -Source $container/SmartHotelSQL1.zip -Destination $tempDir\SmartHotelSQL1.zip"
+ cmd /c "$azcopy -Source $container/UbuntuWAF.zip -Destination $tempDir\UbuntuWAF.zip"
 
 # Download the Azure Migrate appliance to save time during the lab
 $migrateApplianceUrl = Follow-Redirect("https://aka.ms/migrate/appliance/hyperv")
