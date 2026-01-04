@@ -102,7 +102,7 @@
             "resources": [
                 {
                     "name": "smarthotelhostVM-CustomSciptExtension",
-                    "type": "Microsoft.Compute/virtualMachines/extensions",
+                    "type": "extensions",
                     "apiVersion": "2018-06-01",
                     "location": "[resourceGroup().location]",
                     "dependsOn": [
