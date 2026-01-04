@@ -101,7 +101,7 @@
             ],
             "resources": [
                 {
-                    "name": "smarthotelhostVM-CustomSciptExtension",
+                    "name": "CustomSciptExtension",
                     "type": "extensions",
                     "apiVersion": "2016-03-30",
                     "location": "[resourceGroup().location]",
@@ -115,7 +115,7 @@
                         "publisher": "Microsoft.Compute",
                         "type": "CustomScriptExtension",
                         "typeHandlerVersion": "1.4",
-                        "autoUpgradeMinorVersion": true,
+                        "autoUpgradeMinorVersion": false,
                         "settings": {
                             "fileUris": [
                                 "[variables('customScriptUri')]"
