@@ -101,7 +101,7 @@
             ],
             "resources": [
                 {
-                    "name": "CustomSciptExtension",
+                    "name": "[resourceId('Microsoft.Compute/virtualMachines', variables('smarthotelhostVMname'))]-CustomSciptExtension",
                     "type": "Microsoft.Compute/virtualMachines/extensions",
                     "apiVersion": "2018-06-01",
                     "location": "[resourceGroup().location]",
