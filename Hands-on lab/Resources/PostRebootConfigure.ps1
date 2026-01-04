@@ -147,7 +147,7 @@ $container = 'https://opsgilitylabs.blob.core.windows.net/public'
 Start-BitsTransfer -Source "$container/SmartHotelWeb1.zip" -Destination "$tempDir\SmartHotelWeb1.zip"
 Start-BitsTransfer -Source "$container/SmartHotelWeb2.zip" -Destination "$tempDir\SmartHotelWeb2.zip"
 Start-BitsTransfer -Source "$container/SmartHotelSQL1.zip" -Destination "$tempDir\SmartHotelSQL1.zip"
-Start-BitsTransfer -Source "$container/UbuntuWAF.zip" -Destination $tempDir\UbuntuWAF.zip
+Start-BitsTransfer -Source "$container/UbuntuWAF.zip" -Destination "$tempDir\UbuntuWAF.zip"
 
 # Download the Azure Migrate appliance to save time during the lab
 $migrateApplianceUrl = Follow-Redirect("https://aka.ms/migrate/appliance/hyperv")
