@@ -103,7 +103,7 @@
                 {
                     "name": "smarthotelhostVM-CustomSciptExtension",
                     "type": "extensions",
-                    "apiVersion": "2018-06-01",
+                    "apiVersion": "2016-03-30",
                     "location": "[resourceGroup().location]",
                     "dependsOn": [
                         "[resourceId('Microsoft.Compute/virtualMachines', variables('smarthotelhostVMname'))]"
@@ -114,7 +114,7 @@
                     "properties": {
                         "publisher": "Microsoft.Compute",
                         "type": "CustomScriptExtension",
-                        "typeHandlerVersion": "1.10",
+                        "typeHandlerVersion": "1.4",
                         "autoUpgradeMinorVersion": true,
                         "settings": {
                             "fileUris": [
